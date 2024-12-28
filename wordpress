@@ -1,0 +1,3 @@
+docker run -d -e MYSQL_ROOT_PASSWORD=Akash@5471 -e MYSQL_DATABASE=wordpressdb -v /home/ec2-user/myvol:/var/lib/sql --name wpsql mysql
+
+docker run -d -p80:80 -e WORDPRESS_DB=root -e WORDPRESS_DB_PASSWORD=Akash@5471 -e WORDPRESS_DB_NAME=wordpressdb --link qpsql:mysql --name wordpress wordpress
