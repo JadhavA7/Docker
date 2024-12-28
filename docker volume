@@ -1,0 +1,14 @@
+docker volume create volume_name
+docker volume ls
+docker volume inspect volume_name
+docker volume rm volume_name
+docker volume prune (it is remove all unused volume)
+  
+# host volume create 
+docker run -d -e MYSQL_ROOT_PASSWORD=Pass@123 -e MYSQL_DATABASE=wordpressdb -v /home/ec2-user/wordpressbackup:/var/lib/sql --name wpsql mysql --name wordpress wordpress
+
+# named volume
+docker run -d -v myvolu:/var/lib/sql
+
+# anonymous volumes
+docker -d -v /var/lib/sql
