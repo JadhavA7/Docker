@@ -1,0 +1,6 @@
+# it is used for save image as tar
+docker save -o tar_name image_name
+
+
+# it is used for download tar as image
+docker load -i tar_file_name
