@@ -1,0 +1,28 @@
+docker create nginx
+docker start container_id
+docker run -d container_id or image
+docker exec -it container_id /bin/bash
+docker stop contaier_id
+
+# delete all at time
+docker stop $(docker ps -q)
+docker rm $(docker ps -aq)
+docker rmi $(docker images)
+
+
+docker ps or docker container ls
+docker images or docker image ls
+
+# debugging container
+docker logs container_id
+
+# docker inspect
+docker inspect container_id
+
+# remove image
+docker rmi image_id 
+docker image rm image_id
+docker image prune
+
+# for making container to image
+docker commit container_name new_name
