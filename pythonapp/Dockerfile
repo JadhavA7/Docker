@@ -1,6 +1,6 @@
 FROM python:3.9-slim
        WORKDIR /app
-       COPY requiremebts.txt . or /app/
+       COPY requiremets.txt . or /app/
        RUN pip install -r requirements.txt
        COPY . . or /app/
        EXPOSE 5000
